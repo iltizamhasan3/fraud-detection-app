@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection API</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 50px auto; padding: 0 20px; line-height: 1.6; }
+        h1 { color: #d32f2f; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+        pre { background: #f4f4f4; padding: 16px; border-radius: 8px; overflow-x: auto; }
+        .endpoint { margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px; }
+        .endpoint h3 { margin-top: 0; }
+        .method { display: inline-block; padding: 4px 8px; border-radius: 4px; color: white; font-weight: bold; font-size: 12px; }
+        .post { background: #1976d2; }
+        .get { background: #388e3c; }
+    </style>
+</head>
+<body>
+    <h1>Fraud Detection API</h1>
+    <p>SVM-based credit card fraud detection. Kirim request POST ke <code>/predict</code> untuk prediksi.</p>
+
+    <div class="endpoint">
+        <h3><span class="method post">POST</span> /predict</h3>
+        <p>Deteksi apakah transaksi adalah fraud.</p>
+        <pre>{
+  "merchant": "fraud_Rippin, Kub and Mann",
+  "category": "misc_net",
+  "amt": 100.0,
+  "gender": "F",
+  "zip": "28654",
+  "job": "Engineer",
+  "unix_time": 1325376018,
+  "dob": "1988-03-09",
+  "lat": 36.0788,
+  "long": -81.1781,
+  "merch_lat": 36.0113,
+  "merch_long": -82.0483,
+  "city_pop": 3495,
+  "model_type": "auc"
+}</pre>
+    </div>
+
+    <div class="endpoint">
+        <h3><span class="method get">GET</span> /health</h3>
+        <p>Cek status API.</p>
+    </div>
+
+    <p>Gunakan <strong>Streamlit frontend</strong> untuk GUI: <code>streamlit run frontend.py</code></p>
+</body>
+</html>
