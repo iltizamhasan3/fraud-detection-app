@@ -31,8 +31,6 @@ Proyek ini mengimplementasikan SVM-based fraud detection pada dataset transaksi 
 │   ├── kolom_kategori.pkl  # Kolom kategori
 │   └── evaluasi_*.png      # Confusion Matrix + ROC Curve (5 model)
 ├── data/               # fraudTrain.csv, fraudTest.csv (gitignored)
-├── presentasi.md       # Slide PPT (6 bagian paragraf pendek)
-├── train_flow.puml     # PlantUML diagram alur training
 └── requirements.txt    # Dependencies (tanpa versi)
 ```
 
